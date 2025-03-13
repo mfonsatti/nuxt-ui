@@ -1,75 +1,34 @@
-# Nuxt UI v3 Starter
+# Nuxt UI Project
 
-Look at [Nuxt docs](https://nuxt.com/docs/getting-started/introduction) and [Nuxt UI docs](https://ui3.nuxt.dev) to learn more.
+This project is a Nuxt-based UI for managing travel bookings. It allows users to view available travels, reserve seats, and manage their cart. Below are the instructions and features of the project.
 
-## Setup
+## Step 1: Setting up the Project
 
-Make sure to install the dependencies:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mfonsatti/nuxt-ui
+   ```
+2. Install the dependencies:
+   ```bash
+   cd nuxt-ui
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-```bash
-# npm
-npm install
+Once the project is up and running, you can access it at `http://localhost:3000`.
+To Work properly the Laravel Backend must be up and running https://github.com/mfonsatti/weroad-api
+The API communication is already set up to be toward localhost:8000
 
-# pnpm
-pnpm install
+## Features
 
-# yarn
-yarn install
+- **Available Travels**: The project will display only the available travels that have 1 or more reservations, with a maximum of 5 seats.
+- **Booking Reservation**: Users can reserve a travel at the indicated price for a period of 15 minutes.
+- **Cart Management**: Users can retrieve their cart operations via email.
+- **Expired Reservations**: The cart will show expired reservations.
+- **Available Reservations**: The cart will show reservations that can still be purchased.
+- **Booking Confirmation**: Only reservations that are not already confirmed can be purchased.
+- **Concurrency Handling**: When booking a single travel, the system will handle the classic example where a user reserves a seat, but before completing the payment, another user reserves and confirms all available seats for that travel.
 
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
